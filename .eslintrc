@@ -1,37 +1,11 @@
 {
-  "root": true,
-  "extends": [
-    "prettier",
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "react",
-    "react-hooks"
-  ],
+  "extends": ["@react-native-community", "airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./tsconfig-utils.json"]
+  },
+  "plugins": ["import"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-explicit-any": "off"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "globals": {
-    "JSX": true
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
   }
 }
